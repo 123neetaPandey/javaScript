@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <script src="/assignments/removeEv.js"></script>
+
+    e>Naslov</title>
+            <script
+                src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous">
+            </script>
+         
+        </head>
+        <body>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 ">
+            <h1>Phone list</h1>
+                <ul class='lst'>
+                    <li class="listItem">samsung <button class='x'>x</button> </li>
+                    <li class="listItem">Sansui<button class='x'>x</button></li>
+                    <li class="listItem">Oppo<button class='x'>x</button></li>
+                </ul>
+                <input class='inp' type='text' />
+                <button class='btn'>Add item</button>
+        </div>
+        
+            <div class="col-6 ">
+                <h1>fruit List</h1>
+            <ul class='lst1'>
+                <li class="listItem1">apple<button class="y">x</button> </li>
+                <li class="listItem1">Mango<button class='y'>x</button></li>
+                <li class="listItem1">orange<button class='y'>x</button></li>
+            </ul>
+            <input class='inp1' type='text' />
+            <button class='btn1'>Add item</button>
+    </div></div></div>
+                <script>
+                        let listItems = document.getElementsByTagName('li');
+                        let lst = document.querySelector('.lst');
+                        let inp = document.querySelector('.inp');
+                        let btn = document.querySelector('.btn');
+                        let btn2 = '<button class="x">x</button>';
+
+                        function addListItem(){
+                            lst.appendChild(document.createElement('li'));
+                            let lstChild = lst.lastChild;
+                            lstChild.innerHTML = inp.value + btn2;
+                            lstChild.className = 'listItem';
+                            lstChild.lastChild.addEventListener('click', removeListItem);
+                            inp.value = '';
+                        }
+
+                        function removeListItem(){
+                             lst.removeChild(this.parentNode);
+                        }
+
+                        btn.addEventListener('click', addListItem);
+                        $('.listItem .x').on('click', removeListItem);
+
+////////////////////////
+let listItems1 = document.getElementsByTagName('li');
+                        let lst1 = document.querySelector('.lst1');
+                        let inp1 = document.querySelector('.inp1');
+                        let btn1 = document.querySelector('.btn1');
+                        let btn3 = '<button class="y">x</button>';
+
+                        function addListItem1(){
+                            lst1.appendChild(document.createElement('li'));
+                            let lstChild = lst1.lastChild;
+                            lstChild.innerHTML = inp.value + btn3;
+                            lstChild.className = 'listItem1';
+                            lstChild.lastChild.addEventListener('click', removeListItem1);
+                            inp1.value = '';
+                        }
+
+                        function removeListItem1(){
+                             lst1.removeChild(this.parentNode);
+                        }
+
+                        btn1.addEventListener('click', addListItem1);
+                        $('.listItem1 .y').on('click', removeListItem1);
+                       
+                </script>
+                <script src="/js/jquery-3.5.0.js"></script>
+                <script src="/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

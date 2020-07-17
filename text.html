@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 pl-6">
+    <h1>Phone Lists</h1>
+    <ul id="demo" onclick="first()">
+      <li>oppo</li>
+      <li>jio</li></ul>
+      <input type="text"   id="phone">
+      <input type="submit" onclick="getAdd()" value="Add new element"> 
+      <button onclick="phoneRe()">Delete</button>
+</div>
+    <div class="col-6 pl-4 ">
+        <h1>fruits Lists</h1>
+        <ul id="demo1" onclick="last()">
+          <li >Mango</li>
+          <li >Apple</li>
+        </ul>
+          <input type="text"   id="fruits"> 
+          <input type="submit" onclick="getAdd1()" value="Add new element"> 
+          <button onclick="fruitRe()">Delete</button>
+    
+    
+        
+    </div>
+</div>
+
+    <script src="/assignments/text.js"></script>
+    <script src="/js/jquery-3.5.0.js"></script>
+<script src="/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
